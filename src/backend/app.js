@@ -7,7 +7,7 @@ const mealsRouter = require("./api/meals");
 const buildPath = path.join(__dirname, "../../dist");
 const port = process.env.PORT || 3000;
 const cors = require("cors");
-const knex = require("knex");
+const knex = require("./database");
 
 // For week4 no need to look into this!
 // Serve the built client html
