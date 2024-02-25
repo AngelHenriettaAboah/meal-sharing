@@ -23,71 +23,99 @@ app.use(cors());
 router.use("/meals", mealsRouter);
 
 // Route to respond with all meals in the future
-router.get("/future-meals", async (req, res) => {
+const todayDate = new Date();
+app.get("/future-meals", async (req, res) => {
   try {
-    const futureMeals = await knex.raw(
-      "SELECT * FROM meals WHERE `when` > NOW()"
-    );
-    res.json(futureMeals[0]);
-  } catch (error) {
-    console.error("Error fetching future meals:", error);
-    res.status(500).json({ error: "Internal server error" });
+    const futureMeals = await knex
+      .select("*")
+      .from("meal")
+      .where("meal_time", ">", todayDate);
+    if (futureMeals !== 0) {
+      res.status(200).json(futureMeals);
+    }
+    res
+      .status(404)
+      .send("The data you have requested for Future Meals is not found");
+  } catch (err) {
+    console.error("Server Error", err);
+    res.status(500).send("Error: Not able to fetch data for future meals");
   }
 });
 
 // Route to respond with all meals in the past
-router.get("/past-meals", async (req, res) => {
+app.get("/past-meals", async (req, res) => {
   try {
-    const pastMeals = await knex.raw(
-      "SELECT * FROM meals WHERE `when` < NOW()"
-    );
-    res.json(pastMeals[0]);
-  } catch (error) {
-    console.error("Error fetching past meals:", error);
-    res.status(500).json({ error: "Internal server error" });
+    const pastMeals = await knex
+      .select("*")
+      .from("meal")
+      .where("meal_time", "<", todayDate);
+    if (pastMeals !== 0) {
+      res.status(200).json(pastMeals);
+    }
+    res
+      .status(404)
+      .send("The data you have requested for Past Meals is not found");
+  } catch (err) {
+    console.error("Server Error", err);
+    res.status(500).send("Error: Not able to fetch data for past meals");
   }
 });
 
 // Route to respond with all meals sorted by ID
-router.get("/all-meals", async (req, res) => {
+app.get("/all-meals", async (req, res) => {
   try {
-    const allMeals = await knex.raw("SELECT * FROM meals ORDER BY id");
-    res.json(allMeals[0]);
-  } catch (error) {
-    console.error("Error fetching all meals:", error);
-    res.status(500).json({ error: "Internal server error" });
+    const allMeals = await knex.select("*").from("meal").orderBy("id"); // Sorting by ID
+    if (allMeals !== 0) {
+      res.status(200).json(allMeals);
+    }
+    res.status(404).send("The data you have requested for meals is not found");
+  } catch (err) {
+    console.error("Server Error", err);
+    res.status(500).send("Error: Not able to fetch data for meals");
   }
 });
 
 // Route to respond with the first meal (minimum id)
-router.get("/first-meal", async (req, res) => {
+app.get("/first-meal", async (req, res) => {
   try {
-    const firstMeal = await knex.raw("SELECT * FROM meals ORDER BY id LIMIT 1");
-    if (firstMeal[0].length === 0) {
-      res.status(404).json({ error: "No meals found" });
-    } else {
-      res.json(firstMeal[0][0]);
+    const firstMeal = await knex
+      .select("*")
+      .from("meal")
+      .orderBy("id")
+      .limit(1); // Limiting the result to just one meal
+    if (firstMeal !== 0) {
+      res.status(200).json(firstMeal);
     }
-  } catch (error) {
-    console.error("Error fetching first meal:", error);
-    res.status(500).json({ error: "Internal server error" });
+    res
+      .status(404)
+      .send(
+        "The data you have requested for First Meal with the minimum ID is not found"
+      );
+  } catch (err) {
+    console.error("Server Error", err);
+    res.status(500).send("Error: Not able to fetch data for meals");
   }
 });
 
 // Route to respond with the last meal (maximum id)
-router.get("/last-meal", async (req, res) => {
+app.get("/last-meal", async (req, res) => {
   try {
-    const lastMeal = await knex.raw(
-      "SELECT * FROM meals ORDER BY id DESC LIMIT 1"
-    );
-    if (lastMeal[0].length === 0) {
-      res.status(404).json({ error: "No meals found" });
-    } else {
-      res.json(lastMeal[0][0]);
+    const lastMeal = await knex
+      .select("*")
+      .from("meal")
+      .orderBy("id", "desc")
+      .limit(1);
+    if (lastMeal !== 0) {
+      res.status(200).json(lastMeal);
     }
-  } catch (error) {
-    console.error("Error fetching last meal:", error);
-    res.status(500).json({ error: "Internal server error" });
+    res
+      .status(404)
+      .send(
+        "The data you have requested for First Meal with the minimum ID is not found"
+      );
+  } catch (err) {
+    console.error("Server Error", err);
+    res.status(500).send("Error: Not able to fetch data for meals");
   }
 });
 
