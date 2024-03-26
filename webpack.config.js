@@ -40,11 +40,11 @@ module.exports = {
   devServer: {
     static: "/",
     historyApiFallback: true,
-    port: 3306,
+    port: 3000,
     hot: true,
     open: process.env.OPEN_BROWSER === "true" ? true : false,
     proxy: {
-      "/api": "http://localhost:3306",
+      "/api": "http://localhost:3001",
       secure: false, // Change to true if your API server uses HTTPS
       changeOrigin: true,
     },
