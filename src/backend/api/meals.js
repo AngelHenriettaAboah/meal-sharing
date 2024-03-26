@@ -47,8 +47,8 @@ mealsRouter.get("/", async (req, res) => {
     }
 
     // Handle sortKey and sortDir parameters
-    if (req.query.sortKey) {
-      mealsQuery = mealsQuery.orderBy(req.query.sortKey, req.query.sortDir || "asc");
+    if (req.query.sortKey && req.query.sortDir) {
+      mealsQuery = mealsQuery.orderBy(req.query.sortKey, req.query.sortDir);
     }
 
     // Execute the query and send the response
