@@ -1,24 +1,16 @@
 const knex = require("knex");
 const express = require("express");
 const database = require("../database");
-const { router } = require("../app");
 const app = express();
+const mealsRouter = express.Router(); // Create a new Router
 
+// Mount the mealsRouter at the /api/meals path
 app.use("/api/meals", mealsRouter);
 
-// router.get("/", async (request, response) => {
-//try {
-// knex syntax for selecting things. Look up the documentation for knex for further info
-//const titles = await knex("meals").select("title");
-//response.json(titles);
-//} catch (error) {
-//throw error;
-//}
-//});
-
-app.get("/api/meals", async (req, res) => {
+// Define the route handler for GET /api/meals
+mealsRouter.get("/", async (req, res) => {
   try {
-    let mealsQuery = knex("meals");
+    let mealsQuery = knex("meals"); // Start with a simple query
 
     // Handle maxPrice parameter
     if (req.query.maxPrice) {
@@ -55,8 +47,8 @@ app.get("/api/meals", async (req, res) => {
     }
 
     // Handle sortKey and sortDir parameters
-    if (req.query.sortKey && req.query.sortDir) {
-      mealsQuery = mealsQuery.orderBy(req.query.sortKey, req.query.sortDir);
+    if (req.query.sortKey) {
+      mealsQuery = mealsQuery.orderBy(req.query.sortKey, req.query.sortDir || "asc");
     }
 
     // Execute the query and send the response
@@ -68,4 +60,4 @@ app.get("/api/meals", async (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = mealsRouter; // Export the mealsRouter
