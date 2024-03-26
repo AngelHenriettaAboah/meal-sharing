@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const knex = require("knex");
+const knex = require("../database");
 
 // GET all reviews
-router.get("/api/reviews", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const reviews = await knex("reviews").select("*");
     res.json(reviews);
@@ -14,7 +14,7 @@ router.get("/api/reviews", async (req, res) => {
 });
 
 // GET all reviews for a specific meal
-router.get("/api/meals/:meal_id/reviews", async (req, res) => {
+router.get("/meals/:meal_id", async (req, res) => {
   const mealId = req.params.meal_id;
   try {
     const reviews = await knex("reviews").where({ meal_id: mealId });
@@ -26,7 +26,7 @@ router.get("/api/meals/:meal_id/reviews", async (req, res) => {
 });
 
 // POST a new review
-router.post("/api/reviews", async (req, res) => {
+router.post("/", async (req, res) => {
   const newReview = req.body;
   try {
     await knex("reviews").insert(newReview);
@@ -38,7 +38,7 @@ router.post("/api/reviews", async (req, res) => {
 });
 
 // GET a review by id
-router.get("/api/reviews/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   const reviewId = req.params.id;
   try {
     const review = await knex("reviews").where({ id: reviewId }).first();
@@ -53,7 +53,7 @@ router.get("/api/reviews/:id", async (req, res) => {
 });
 
 // UPDATE a review by id
-router.put("/api/reviews/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
   const reviewId = req.params.id;
   const updatedReview = req.body;
   try {
@@ -66,7 +66,7 @@ router.put("/api/reviews/:id", async (req, res) => {
 });
 
 // DELETE a review by id
-router.delete("/api/reviews/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const reviewId = req.params.id;
   try {
     await knex("reviews").where({ id: reviewId }).del();
@@ -76,3 +76,5 @@ router.delete("/api/reviews/:id", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
+module.exports = router;
