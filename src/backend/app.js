@@ -4,6 +4,7 @@ const router = express.Router();
 const path = require("path");
 
 const mealsRouter = require("./api/meals");
+const reviewsRouter = require("./api/reviews"); // Import the reviews router
 const buildPath = path.join(__dirname, "../../dist");
 const port = process.env.PORT || 3000;
 const cors = require("cors");
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use(cors());
 
 router.use("/meals", mealsRouter);
+router.use("/reviews", reviewsRouter); // Map the reviews router to the /reviews path
 
 mealsRouter.get("/", (req, res) => {
   // Handle GET request for meals
