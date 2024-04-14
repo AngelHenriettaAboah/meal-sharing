@@ -1,0 +1,74 @@
+body {
+  background-image: url("./image9.jpg"); /* Choose your desired background color */
+}
+
+.form-add-meal {
+  border-radius: 5px;
+  background-color: #0c346d;
+  padding: 20px;
+  width: 50vw;
+  margin: 70px auto 30px;
+  align-items: center;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  font-size: 18px;
+  background-color: #0c346d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #f9a509; /* Change the background color on hover */
+}
+
+.form-text {
+  text-align: center;
+}
+
+.meal-description-text {
+  width: 100%;
+  line-height: 3.2em;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1100px) {
+  .form-add-meal {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 805px) {
+  .form-add-meal {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-add-meal {
+    width: 100vw;
+    margin: 50px auto 25px;
+  }
+  .form-text {
+    font-size: 15px;
+  }
+}

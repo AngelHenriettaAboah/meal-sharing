@@ -26,7 +26,7 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(png|jpe?g|gif|woff|woff2|eot|ttf|svg)$/i,
         use: {
           loader: "url-loader",
           options: { limit: 100000 },
@@ -40,11 +40,11 @@ module.exports = {
   devServer: {
     static: "/",
     historyApiFallback: true,
-    port: 3000,
+    port: 3003,
     hot: true,
     open: process.env.OPEN_BROWSER === "true" ? true : false,
     proxy: {
-      "/api": "http://localhost:3001",
+      "/api": "http://localhost:5001",
       secure: false, // Change to true if your API server uses HTTPS
       changeOrigin: true,
     },
