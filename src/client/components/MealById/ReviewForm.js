@@ -52,7 +52,7 @@ export function ReviewForm(props) {
       },
     }).then((response) => {
       if (response.ok) {
-        alert("Your review sent succesfully");
+        alert("Your review sent successfully");
         props.fetchReviewsFunction();
         setReview("");
         setStars("");
