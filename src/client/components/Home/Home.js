@@ -77,7 +77,7 @@ export function Home() {
                     spices, long-grain rice, and a tomato and red pepper base.
                   </p>
                   <div style={{ display: "flex", justifyContent: "center" }}>
-                    <Link to="/meals" smooth={true} duration={500}>
+                    <Link to="/meals/12" smooth={true} duration={500}>
                       <button className="book-meal">Order Meal</button>
                     </Link>
                   </div>
@@ -111,7 +111,7 @@ export function Home() {
                     with the region of Valencia.
                   </p>
                   <div style={{ display: "flex", justifyContent: "center" }}>
-                    <Link to="/meals" smooth={true} duration={500}>
+                    <Link to="/meals/21" smooth={true} duration={500}>
                       <button className="book-meal">Order Meal</button>
                     </Link>
                   </div>
@@ -144,7 +144,7 @@ export function Home() {
                     variety of toppings or fillings.
                   </p>
                   <div style={{ display: "flex", justifyContent: "center" }}>
-                    <Link to="/meals" smooth={true} duration={500}>
+                    <Link to="/meals/8" smooth={true} duration={500}>
                       <button className="book-meal">Order Meal</button>
                     </Link>
                   </div>
