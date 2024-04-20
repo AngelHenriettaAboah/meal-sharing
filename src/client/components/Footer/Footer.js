@@ -42,8 +42,8 @@ export function Footer() {
           </p>
           <p>
             {" "}
-            <Link to="/about" className="nav-link-footer">
-              ABOUT
+            <Link to="/portfolio" className="nav-link-footer">
+              PORTFOLIO
             </Link>
           </p>
           <p>
