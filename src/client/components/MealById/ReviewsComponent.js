@@ -49,6 +49,7 @@ export function ReviewsComponent(props) {
         {reviews.map((item) => (
           <li className="review-card" key={item.id}>
             <p className="review-data">{item.title}</p>
+            <h3 className="review-data">{item.name}</h3>
             <p className="review-data">{item.description}</p>
             <p className="review-data">{convertDate(item.created_date)}</p>
             <p className="review-data">{item.stars} star</p>

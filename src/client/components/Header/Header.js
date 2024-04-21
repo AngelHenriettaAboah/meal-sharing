@@ -1,9 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logoHeader from "./Yellow and green Logo.png";
 import "./header.css";
 
 export default function Header() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearchInputChange = (event) => {
+    setSearchQuery(event.target.value);
+    fetchMeals(event.target.value);
+  };
+
+  const fetchMeals = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:5001/api/meals?title=${searchQuery}`
+      );
+      const data = await response.json();
+      setSearchResults(data);
+    } catch (error) {
+      console.error("Error fetching meals:", error);
+    }
+  };
+
+  const handleSearchButtonClick = () => {
+    if (searchQuery.trim() !== "") {
+      console.log("search");
+      fetchMeals();
+    }
+  };
+
+  useEffect(() => {
+    // Only fetch meals if searchQuery is not empty
+    if (searchQuery.trim() !== "") {
+      fetchMeals();
+    } else {
+      // If searchQuery is empty, clear the searchResults
+      setSearchResults([]);
+    }
+  }, [searchQuery]);
+
   return (
     <header>
       <div className="description-header">
@@ -24,6 +61,21 @@ export default function Header() {
         <Link to="/blog" className="nav-link">
           Blog
         </Link>
+        <div className="search-container">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={handleSearchInputChange}
+            placeholder="Search meals..."
+          />
+          <ul>
+            {searchResults.map((meal) => (
+              <li key={meal.id}>
+                <Link to={`/meals/${meal.id}`}>{meal.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </header>
   );

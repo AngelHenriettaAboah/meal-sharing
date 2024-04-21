@@ -46,6 +46,7 @@ export function ReviewForm(props) {
         meal_id: parseInt(params.id),
         stars: parseInt(stars),
         created_date: getTodaysDate(),
+        name: name,
       }),
       headers: {
         "Content-Type": "application/json",

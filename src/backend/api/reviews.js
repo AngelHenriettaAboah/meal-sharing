@@ -13,6 +13,7 @@ router.get("/", async (request, response) => {
       "Review.title",
       "Review.description",
       "Review.meal_id",
+      "Review.name",
       "Review.stars",
       "Review.created_date"
     );

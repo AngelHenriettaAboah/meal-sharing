@@ -15,7 +15,7 @@ export function MealWithId() {
   useEffect(() => {
     fetchMealWithId();
     fetchAvailReservation();
-  }, []);
+  }, [params.id]);
 
   function fetchMealWithId() {
     fetch(`/api/meals/${params.id}`)
@@ -59,6 +59,7 @@ export function MealWithId() {
         title={meal.title}
         description={meal.description}
         availRes={availRes}
+        imageUrl={meal.image}
       />
       {parseInt(availRes) > 0 ? (
         <>

@@ -62,11 +62,8 @@ router.get("/", async (request, response) => {
       "Meal.created_date",
       "Meal.image"
     );
-    if (result.length === 0) {
-      response.status(404).json("Not found");
-    } else {
-      response.json(result);
-    }
+
+    response.json(result);
   } catch (error) {
     throw error;
   }
