@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 import Header from "./components/Header/Header";
 import { Meals } from "./components/MealsPage/Meals";
 import { MealWithId } from "./components/MealById/MealWithId";
