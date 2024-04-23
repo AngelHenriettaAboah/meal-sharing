@@ -21,7 +21,7 @@ export function Home() {
         className="section"
         style={{
           backgroundImage:
-            "url('/Users/aaronaboah/meal-sharing/src/client/components/Home/image17.jpg')",
+            "url('https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Home/image17.jpg')",
         }}
       >
         <div className="container">
@@ -161,7 +161,7 @@ export function Home() {
         className="section"
         style={{
           backgroundImage:
-            "url('/Users/aaronaboah/meal-sharing/src/client/components/Home/image0.jpg')",
+            "url('https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Home/image0.jpg')",
         }}
       >
         <div className="container">
@@ -400,7 +400,7 @@ export function Home() {
         className="section"
         style={{
           backgroundImage:
-            "url('/Users/aaronaboah/meal-sharing/src/client/components/Home/image13.jpg')",
+            "url('https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Home/image13.jpg')",
           color: "white",
         }}
       >
@@ -419,7 +419,7 @@ export function Home() {
           <div className="about-content">
             <div className="about-image">
               <img
-                src="/Users/aaronaboah/meal-sharing/src/client/components/Home/image18.jpg"
+                src="https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Home/image18.jpg"
                 alt="About Us Image"
               />
             </div>
@@ -468,7 +468,7 @@ export function Home() {
           <div className="founder-content">
             <div className="founder-image">
               <img
-                src="/Users/aaronaboah/meal-sharing/src/client/components/Home/image19.jpg"
+                src="https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Home/image19.jpg"
                 alt="Founder Image"
               />
               <h3
