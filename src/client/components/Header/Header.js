@@ -14,9 +14,7 @@ export default function Header() {
 
   const fetchMeals = async () => {
     try {
-      const response = await fetch(
-        `http://localhost:5001/api/meals?title=${searchQuery}`
-      );
+      const response = await fetch(`/api/meals?title=${searchQuery}`);
       const data = await response.json();
       setSearchResults(data);
     } catch (error) {
