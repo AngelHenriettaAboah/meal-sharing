@@ -90,4 +90,11 @@ body {
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.meal-item-image:hover {
+  transform: scale(
+    1.2
+  ); /* Scale the image to 120% of its original size on hover */
 }
