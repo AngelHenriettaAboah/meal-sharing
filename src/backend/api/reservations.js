@@ -37,7 +37,7 @@ router.post("/", async (request, response) => {
 router.get("/:id", async (request, response) => {
   try {
     const neededId = request.params.id;
-    if (Number(neededId)) {
+    if (isNaN(neededId)) {
       response.status(400).json("Invalid data");
     } else {
       const getById = await knex("Reservation")

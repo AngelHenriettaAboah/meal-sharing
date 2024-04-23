@@ -28,10 +28,10 @@ router.get("/", async (request, response) => {
           "Meal.max_reservations",
           "Meal.image",
           knex.raw(
-            "COALESCE(SUM(Reservation.number_of_guests),0) as total_guests"
+            'COALESCE(SUM("Reservation"."number_of_guests"),0) as total_guests'
           ),
           knex.raw(
-            "(Meal.max_reservations-COALESCE(SUM(Reservation.number_of_guests),0)) AS available_reservation"
+            '("Meal"."max_reservations"-COALESCE(SUM("Reservation"."number_of_guests"),0)) AS available_reservation'
           )
         )
         .groupBy("Meal.id");

@@ -2,9 +2,6 @@
   "name": "meal-sharing",
   "version": "1.0.0",
   "description": "Website for sharing meals",
-  "engines": {
-    "node": "8.11.1"
-  },
   "scripts": {
     "build": "webpack --mode production",
     "start": "npm run build && node ./src/backend/server",
@@ -40,6 +37,7 @@
     "multer": "^1.3.0",
     "mysql2": "^2.1.0",
     "path": "^0.12.7",
+    "pg": "^8.11.5",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-router-dom": "^5.0.1",
