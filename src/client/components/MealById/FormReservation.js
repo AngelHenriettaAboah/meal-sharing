@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
+import Confetti from "react-confetti";
 import { MealsContext } from "../MealsContext/MealsContext";
 export function FormReservation(props) {
   const value = useContext(MealsContext);
@@ -9,6 +10,7 @@ export function FormReservation(props) {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [numberOfGuests, setNumberOfGuest] = useState("");
+  const [reservationSuccess, setReservationSuccess] = useState(false);
 
   function addReservation(event) {
     event.preventDefault();
@@ -37,12 +39,14 @@ export function FormReservation(props) {
       })
         .then((response) => {
           if (response.ok) {
+            setReservationSuccess(true);
             alert("Reservation is booked succesfully");
             props.reloadReservations();
             setEmail("");
             setName("");
             setPhone("");
             setNumberOfGuest("");
+            setTimeout(() => setReservationSuccess(false), 40000); // Reset reservation success after 5 seconds
           }
         })
         .catch((error) => {
@@ -94,6 +98,19 @@ export function FormReservation(props) {
           <button type="submit">Submit</button>
         </form>
       </div>
+
+      {reservationSuccess && (
+        <Confetti
+          width={window.innerWidth}
+          height={window.innerHeight}
+          recycle={false} // Stops confetti from falling again
+          numberOfPieces={200} // Adjust the number of confetti pieces
+          gravity={0.1} // Adjust the gravity to control the falling speed
+          wind={0} // Set wind to 0 to make the confetti fall straight down
+          run={reservationSuccess} // Start confetti animation when reservation is successful
+          onConfettiComplete={() => setReservationSuccess(false)} // Reset reservation success state after confetti animation
+        />
+      )}
     </>
   );
 }
