@@ -46,7 +46,7 @@ export function FormReservation(props) {
             setName("");
             setPhone("");
             setNumberOfGuest("");
-            setTimeout(() => setReservationSuccess(false), 40000); // Reset reservation success after 5 seconds
+            setTimeout(() => setReservationSuccess(false), 5000); // Reset reservation success after 5 seconds
           }
         })
         .catch((error) => {
@@ -104,7 +104,7 @@ export function FormReservation(props) {
           width={window.innerWidth}
           height={window.innerHeight}
           recycle={false} // Stops confetti from falling again
-          numberOfPieces={200} // Adjust the number of confetti pieces
+          numberOfPieces={1000} // Adjust the number of confetti pieces
           gravity={0.1} // Adjust the gravity to control the falling speed
           wind={0} // Set wind to 0 to make the confetti fall straight down
           run={reservationSuccess} // Start confetti animation when reservation is successful

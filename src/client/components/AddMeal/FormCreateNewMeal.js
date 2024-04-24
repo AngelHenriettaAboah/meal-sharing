@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
+import Confetti from "react-dom-confetti";
 import { MealsContext } from "../MealsContext/MealsContext";
 import "./formCreateNewMeal.css";
 
 export function FormCreateNewMeal() {
+  const [showConfetti, setShowConfetti] = useState(false);
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
   const [whenDate, setWhenDate] = useState("");
@@ -43,6 +45,10 @@ export function FormCreateNewMeal() {
         },
       }).then((response) => {
         if (response.ok) {
+          setShowConfetti(true); // Set showConfetti to true after successful submission
+          setTimeout(() => {
+            setShowConfetti(false); // Reset showConfetti after a certain duration
+          }, 5000);
           alert("Post sent succesfully");
           value.fetchMeals();
           setTitle("");
@@ -123,6 +129,20 @@ export function FormCreateNewMeal() {
         />
         <button type="submit">Add Meal</button>
       </form>
+      {/* Conditionally render Confetti component */}
+      {showConfetti && (
+        <Confetti
+          active={showConfetti}
+          numberOfPieces={1000} // Adjust the number of confetti pieces
+          config={{
+            angle: 90,
+            spread: 360,
+            startVelocity: 40,
+            elementCount: 50,
+            decay: 0.9,
+          }}
+        />
+      )}
     </div>
   );
 }

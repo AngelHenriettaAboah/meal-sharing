@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Confetti from "react-dom-confetti";
 
 export function ReviewForm(props) {
   const [meal, setMeal] = useState({});
@@ -8,6 +9,7 @@ export function ReviewForm(props) {
   const [stars, setStars] = useState("");
   const [error, setError] = useState("");
   const [name, setName] = useState("");
+  const [showConfetti, setShowConfetti] = useState(false);
   const params = useParams();
 
   useEffect(() => {
@@ -53,6 +55,10 @@ export function ReviewForm(props) {
       },
     }).then((response) => {
       if (response.ok) {
+        setShowConfetti(true); // Show confetti when review is successfully submitted
+        setTimeout(() => {
+          setShowConfetti(false); // Hide confetti after 5 seconds
+        }, 5000);
         alert("Your review sent successfully");
         props.fetchReviewsFunction();
         setReview("");
@@ -124,6 +130,19 @@ export function ReviewForm(props) {
           <button className="save-review-button" onClick={addReview}>
             Submit
           </button>
+          <Confetti
+            active={showConfetti}
+            numberOfPieces={1000}
+            config={{
+              angle: 90,
+              spread: 360,
+              startVelocity: 40,
+              elementCount: 50,
+              decay: 0.9,
+              left: "50%", // Position confetti in the middle horizontally
+              top: "50%", // Position confetti in the middle vertically
+            }}
+          />
         </div>
       </form>
     </div>
