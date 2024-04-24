@@ -68,18 +68,53 @@
     ); /* Adjust width for two cards per row on smaller screens */
   }
 
+  .about-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .about-image {
+    flex: 0 0 auto; /* Prevent image from growing */
+    margin-right: 20px; /* Add some spacing between image and text */
+  }
+
+  .about-text {
+    flex: 1; /* Allow text to take up remaining space */
+    background-color: #8e7934;
+    font-size: 15px;
+  }
+
   .list-item-main h4 {
     font-size: 15px;
     margin: 15px;
+  }
+
+  .founder-content {
+    display: flex;
+    align-items: center;
+    background-color: #332002;
   }
 
   .cta {
     padding: 20px 0; /* Reduce padding for smaller screens */
   }
 
+  .founder-image {
+    flex: 0 0 auto; /* Prevent image from growing */
+    margin-right: 20px; /* Add some spacing between image and text */
+    position: relative;
+    width: 500px; /* Adjust size as needed */
+    height: 500px; /* Adjust size as needed */
+  }
+
+  .founder-content h3 {
+    text-align: center;
+  }
+
   .founder-text {
     flex: 1; /* Allow text to take up remaining space */
     color: white;
+    font-size: 15px;
   }
 }
 
