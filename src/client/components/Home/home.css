@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex: 1;
+  flex-direction: column;
 }
 
 .book-meal {
@@ -49,6 +49,7 @@
 @media screen and (max-width: 600px) {
   .main-container {
     justify-content: space-around;
+    padding: 20px;
   }
   .container-list {
     display: flex;
@@ -61,9 +62,19 @@
     padding: 10px;
     font-size: 15px;
   }
+  .card {
+    width: calc(
+      50% - 20px
+    ); /* Adjust width for two cards per row on smaller screens */
+  }
+
   .list-item-main h4 {
     font-size: 15px;
     margin: 15px;
+  }
+
+  .cta {
+    padding: 20px 0; /* Reduce padding for smaller screens */
   }
 
   .founder-text {
