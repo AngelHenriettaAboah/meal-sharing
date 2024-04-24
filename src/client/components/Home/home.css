@@ -83,6 +83,8 @@
     flex: 1; /* Allow text to take up remaining space */
     background-color: #8e7934;
     font-size: 15px;
+    padding: 20px;
+    margin-top: 0;
   }
 
   .list-item-main h4 {
@@ -116,6 +118,8 @@
     flex: 1; /* Allow text to take up remaining space */
     color: white;
     font-size: 15px;
+    padding: 20px;
+    margin-top: 0;
   }
 }
 
@@ -232,6 +236,8 @@
 .founder-text {
   flex: 1; /* Allow text to take up remaining space */
   color: white;
+  padding: 20px;
+  margin-top: 0;
 }
 
 .founder-image::before {
