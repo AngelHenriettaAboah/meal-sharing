@@ -49,7 +49,7 @@ export function FormCreateNewMeal() {
           setTimeout(() => {
             setShowConfetti(false); // Reset showConfetti after a certain duration
           }, 5000);
-          alert("Post sent succesfully");
+          alert("Meal added succesfully");
           value.fetchMeals();
           setTitle("");
           setLocation("");
