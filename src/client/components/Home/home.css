@@ -77,9 +77,6 @@
   .about-image {
     flex: 0 0 auto; /* Prevent image from growing */
     margin-right: 20px; /* Add some spacing between image and text */
-    position: relative;
-    width: 100%;
-    border-radius: 15px 15px 0 0;
   }
 
   .about-text {
@@ -88,6 +85,7 @@
     font-size: 15px;
     padding: 20px;
     margin-top: 0;
+    margin-right: 0;
   }
 
   .list-item-main h4 {
@@ -123,6 +121,55 @@
     font-size: 15px;
     padding: 20px;
     margin-top: 0;
+  }
+}
+
+/* Responsive styles for phone */
+@media (max-width: 360px) {
+  .about-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .about-text {
+    flex: 1; /* Allow text to take up remaining space */
+    background-color: #8e7934;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .about-image {
+    width: 100%;
+    flex: 0 0 auto; /* Prevent image from growing */
+    margin-right: 20px; /* Add some spacing between image and text */
+  }
+
+  .founder-text {
+    flex: 1; /* Allow text to take up remaining space */
+    color: white;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: 0;
+  }
+  .founder-content {
+    display: flex;
+    align-items: center;
+    background-color: #332002;
+  }
+
+  .founder-image {
+    flex: 0 0 auto; /* Prevent image from growing */
+    margin-right: 20px; /* Add some spacing between image and text */
+    position: relative;
+    width: 500px; /* Adjust size as needed */
+    height: 500px; /* Adjust size as needed */
+  }
+
+  .founder-content h3 {
+    text-align: center;
   }
 }
 
