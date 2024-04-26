@@ -57,7 +57,7 @@ export function Home() {
                   justifyContent: "center",
                   textAlign: "center",
                   display: "grid",
-                  gridTemplateRows: "auto 1fr",
+                  gridTemplateRows: "auto 1fr 50px",
                   position: "relative",
                 }}
               >
@@ -93,6 +93,9 @@ export function Home() {
                 style={{
                   justifyContent: "center",
                   textAlign: "center",
+                  display: "grid",
+                  gridTemplateRows: "auto 1fr 50px",
+                  position: "relative",
                 }}
               >
                 <img
@@ -139,6 +142,9 @@ export function Home() {
                   style={{
                     justifyContent: "center",
                     textAlign: "center",
+                    display: "grid",
+                    gridTemplateRows: "auto 1fr 50px",
+                    position: "relative",
                   }}
                 >
                   <h3>Sushi</h3>
@@ -177,6 +183,9 @@ export function Home() {
               style={{
                 justifyContent: "center",
                 textAlign: "center",
+                display: "grid",
+                gridTemplateRows: "auto 1fr 50px",
+                position: "relative",
               }}
             >
               <img
@@ -220,6 +229,9 @@ export function Home() {
                 style={{
                   justifyContent: "center",
                   textAlign: "center",
+                  display: "grid",
+                  gridTemplateRows: "auto 1fr 50px",
+                  position: "relative",
                 }}
               >
                 <h3>Liberia</h3>
@@ -248,6 +260,9 @@ export function Home() {
                 style={{
                   justifyContent: "center",
                   textAlign: "center",
+                  display: "grid",
+                  gridTemplateRows: "auto 1fr 50px",
+                  position: "relative",
                 }}
               >
                 <h3>Japan</h3>
@@ -308,6 +323,9 @@ export function Home() {
                 style={{
                   justifyContent: "center",
                   textAlign: "center",
+                  display: "grid",
+                  gridTemplateRows: "auto 1fr 50px",
+                  position: "relative",
                 }}
               >
                 <h3>Boulevard Palace Restaurant & Bar</h3>
@@ -337,6 +355,9 @@ export function Home() {
                 style={{
                   justifyContent: "center",
                   textAlign: "center",
+                  display: "grid",
+                  gridTemplateRows: "auto 1fr 50px",
+                  position: "relative",
                 }}
               >
                 <h3>Zen Sushi Restaurant</h3>
@@ -365,6 +386,9 @@ export function Home() {
                 style={{
                   justifyContent: "center",
                   textAlign: "center",
+                  display: "grid",
+                  gridTemplateRows: "auto 1fr 50px",
+                  position: "relative",
                 }}
               >
                 <h3>Rosi La Loca</h3>
