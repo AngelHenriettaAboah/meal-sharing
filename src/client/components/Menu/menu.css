@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url("/Users/aaronaboah/meal-sharing/src/client/components/Menu/myimage3.jpg");
+  background-image: url("./myimage3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
