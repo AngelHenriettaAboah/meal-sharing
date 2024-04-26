@@ -8,17 +8,6 @@ export function Footer() {
   return (
     <footer>
       <div className="footer-container">
-        <div>
-          <Link to="/">
-            <img className="logo" src={fLogo} alt="facebook-logo" />
-          </Link>
-          <Link to="/">
-            <img className="logo" src={instaLogo} alt="insta-logo" />
-          </Link>
-          <Link to="/">
-            <img className="logo" src={twitterLogo} alt="twitter-logo" />
-          </Link>
-        </div>
         <div className="contacts-container">
           <h3 className="text-footer">Contact Us</h3>
           <p className="contacts"> myInfo@gmail.com</p>
@@ -51,6 +40,17 @@ export function Footer() {
               BLOG
             </Link>
           </p>
+        </div>
+        <div>
+          <Link to="/">
+            <img className="logo" src={fLogo} alt="facebook-logo" />
+          </Link>
+          <Link to="/">
+            <img className="logo" src={instaLogo} alt="insta-logo" />
+          </Link>
+          <Link to="/">
+            <img className="logo" src={twitterLogo} alt="twitter-logo" />
+          </Link>
         </div>
       </div>
       <p className="footer-end">
