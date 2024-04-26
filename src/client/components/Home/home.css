@@ -325,26 +325,3 @@
   /* Apply animation */
   animation: popUp 0.3s ease forwards;
 }
-
-@media screen and (max-width: 1100px) {
-  .container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin: 21px 35px;
-  }
-
-  .section {
-    padding: 40px 0;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin: 21px 35px;
-  }
-}
-
-@media screen and (max-width: 805px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
