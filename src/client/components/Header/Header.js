@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 import logoHeader from "./Yellow and green Logo.png";
 import "./header.css";
 
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const history = useHistory();
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
@@ -39,6 +41,12 @@ export default function Header() {
     }
   }, [searchQuery]);
 
+  const handleIconClick = () => {
+    if (searchResults.length > 0) {
+      history.push(`/meals/${searchResults[0].id}`);
+    }
+  };
+
   return (
     <header>
       <div className="description-header">
@@ -52,10 +60,10 @@ export default function Header() {
         <Link to="/meals" className="nav-link">
           Meals
         </Link>
+
         <Link to="/addMeal" className="nav-link">
           Add Meal
         </Link>
-
         <Link to="/blog" className="nav-link">
           Blog
         </Link>
@@ -66,6 +74,9 @@ export default function Header() {
             onChange={handleSearchInputChange}
             placeholder="Search meals..."
           />
+          <button className="search-button" onClick={handleSearchButtonClick}>
+            <FaSearch className="search-icon" onClick={handleIconClick} />
+          </button>
           <ul>
             {searchResults.map((meal) => (
               <li key={meal.id}>

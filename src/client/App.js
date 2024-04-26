@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
 import { Meals } from "./components/MealsPage/Meals";
 import { MealWithId } from "./components/MealById/MealWithId";
+import { Menu } from "./components/Menu/Menu";
 import { Blog } from "./components/Blog/Blog";
 import { MealsProvider } from "./components/MealsContext/MealsContext";
 import { Home } from "./components/Home/Home";
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path="/meals">
             <Meals />
+          </Route>
+          <Route exact path="/menu">
+            <Menu />
           </Route>
           <Route path="/meals/:id">
             <MealWithId />

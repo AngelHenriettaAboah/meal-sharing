@@ -36,7 +36,7 @@ export function Home() {
             <div className="container">
               <HomePageComponent />
               {/* Link to scroll to the feature meals section */}
-              <Link to="/meals" smooth={isSmooth} duration={500}>
+              <Link to="/menu" smooth={isSmooth} duration={500}>
                 <button className="book-meal">Our Menu</button>
               </Link>
             </div>

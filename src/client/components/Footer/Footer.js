@@ -16,7 +16,7 @@ export function Footer() {
           <p className="contacts">Søren Vej 5, Aarhus</p>
         </div>
         <div className="footer-navigation">
-          <h3 className="text-footer">Menu</h3>
+          <h3 className="text-footer">Catalog</h3>
           <p>
             {" "}
             <Link to="/" className="nav-link-footer">

@@ -12,7 +12,7 @@ export function Blog() {
         <h2 className="description-header">
           Elevate Your Dining Experience: Explore Our Meal Sharing Community!
         </h2>
-        <ul className="text-food-waste">
+        <ul className="text-food">
           <li>
             <h4 className="blog-title"> Embark on a Culinary Journey</h4>
             <p>

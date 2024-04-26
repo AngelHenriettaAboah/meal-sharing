@@ -59,17 +59,17 @@ nav {
 
 .search-button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #0c346d;
   color: #fff;
   border: none;
-  border-radius: none;
+  border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
 .search-button:hover {
-  background-color: #0c346d;
+  background-color: #ff9900;
 }
 
 ul {
