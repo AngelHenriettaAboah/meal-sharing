@@ -56,6 +56,9 @@ export function Home() {
                 style={{
                   justifyContent: "center",
                   textAlign: "center",
+                  display: "grid",
+                  gridTemplateRows: "auto 1fr",
+                  position: "relative",
                 }}
               >
                 <img
