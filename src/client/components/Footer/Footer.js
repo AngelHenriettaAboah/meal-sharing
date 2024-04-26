@@ -8,13 +8,6 @@ export function Footer() {
   return (
     <footer>
       <div className="footer-container">
-        <div className="contacts-container">
-          <h3 className="text-footer">Contact Us</h3>
-          <p className="contacts"> myInfo@gmail.com</p>
-          <p className="contacts"> 222 222 222</p>
-          <p className="contacts"> 10:00am - 7:00pm</p>
-          <p className="contacts">Søren Vej 5, Aarhus</p>
-        </div>
         <div className="footer-navigation">
           <h3 className="text-footer">Menu</h3>
           <p>
@@ -41,6 +34,15 @@ export function Footer() {
             </Link>
           </p>
         </div>
+
+        <div className="contacts-container">
+          <h3 className="text-footer">Contact Us</h3>
+          <p className="contacts"> myInfo@gmail.com</p>
+          <p className="contacts"> 222 222 222</p>
+          <p className="contacts"> 10:00am - 7:00pm</p>
+          <p className="contacts">Søren Vej 5, Aarhus</p>
+        </div>
+
         <div>
           <Link to="/">
             <img className="logo" src={fLogo} alt="facebook-logo" />
