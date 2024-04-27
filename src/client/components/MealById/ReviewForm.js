@@ -6,7 +6,7 @@ import Confetti from "react-dom-confetti";
 export function ReviewForm(props) {
   const [meal, setMeal] = useState({});
   const [review, setReview] = useState("");
-  const [stars, setStars] = useState("");
+  const [stars, setStars] = useState("0");
   const [error, setError] = useState("");
   const [name, setName] = useState("");
   const [showConfetti, setShowConfetti] = useState(false);
@@ -38,6 +38,7 @@ export function ReviewForm(props) {
     const fullDate = yyyy + "-" + mm + "-" + dd;
     return fullDate;
   }
+
   function addReview(event) {
     event.preventDefault();
     fetch("/api/reviews", {
@@ -46,7 +47,7 @@ export function ReviewForm(props) {
         title: "Review for " + meal.title,
         description: review,
         meal_id: parseInt(params.id),
-        stars: parseInt(stars),
+        stars: stars,
         created_date: getTodaysDate(),
         name: name,
       }),
@@ -62,7 +63,7 @@ export function ReviewForm(props) {
         alert("Your review sent successfully");
         props.fetchReviewsFunction();
         setReview("");
-        setStars("");
+        setStars("0");
         setName("");
       }
     });
@@ -112,21 +113,16 @@ export function ReviewForm(props) {
             className="name-label"
             style={{ color: "white" }}
           >
-            Give a star:
+            Rate meal:
           </label>
-          <select
-            id="stars"
-            name="stars"
-            value={stars}
-            multiple={false}
-            onChange={(e) => setStars(e.target.value)}
-          >
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-            <option value={4}>4</option>
-            <option value={5}>5</option>
-          </select>
+          <div style={{ fontSize: "24px", color: "#ffd700" }}>
+            {[...Array(5)].map((_, index) => (
+              <span key={index} onClick={() => setStars(index + 1)}>
+                {index < stars ? "★" : "☆"}
+              </span>
+            ))}
+          </div>
+
           <button className="save-review-button" onClick={addReview}>
             Submit
           </button>

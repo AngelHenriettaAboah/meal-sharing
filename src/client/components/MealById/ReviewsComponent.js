@@ -35,7 +35,10 @@ export function ReviewsComponent(props) {
 
   return (
     <>
-      <ReviewForm fetchReviewsFunction={fetchReviews}></ReviewForm>
+      <ReviewForm
+        fetchReviewsFunction={fetchReviews}
+        stars={reviews.length > 0 ? reviews[0].stars : 0}
+      ></ReviewForm>
       {isLoading ? <p className="loading-text"> Loading... </p> : ""}
       {error && <p className="error-text"> Something went wrong </p>}
       {reviews.length > 0 ? (
@@ -52,7 +55,16 @@ export function ReviewsComponent(props) {
             <h3 className="review-data">{item.name}</h3>
             <p className="review-data">{item.description}</p>
             <p className="review-data">{convertDate(item.created_date)}</p>
-            <p className="review-data">{item.stars} star</p>
+            <p className="review-data">
+              {[...Array(5)].map((_, index) => (
+                <span
+                  key={index}
+                  className={index < item.stars ? "filled" : ""}
+                >
+                  ★
+                </span>
+              ))}
+            </p>
           </li>
         ))}
       </ul>

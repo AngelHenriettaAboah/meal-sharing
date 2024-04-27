@@ -98,3 +98,11 @@ body {
     1.2
   ); /* Scale the image to 120% of its original size on hover */
 }
+
+.meal-rating {
+  color: #ffc107; /* Yellow color for filled stars */
+}
+
+.meal-rating {
+  margin-top: 5px;
+}

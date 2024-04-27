@@ -3,6 +3,21 @@ import { Link } from "react-router-dom";
 import "./meals.css";
 
 export function MealItem(props) {
+  const renderStars = (rating) => {
+    const fullStar = "★";
+    const emptyStar = "☆";
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      if (i < rating) {
+        stars.push(fullStar);
+      } else {
+        stars.push(emptyStar);
+      }
+    }
+    return stars.join(" "); // Join stars into a single string
+  };
+
+  const randomRating = Math.floor(Math.random() * 6);
   return (
     <li className="meal-item">
       <img
@@ -15,6 +30,7 @@ export function MealItem(props) {
       <p>{props.mealDescription}</p>
       <p>{props.locationRestaurant}</p>
       <p className="meal-price">{props.mealPrice} kr.</p>
+      <p className="meal-rating">{renderStars(randomRating)}</p>
       <Link to={`/meals/${props.id}`}>
         <button
           className="meal-button"

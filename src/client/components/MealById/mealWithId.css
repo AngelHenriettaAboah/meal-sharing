@@ -232,3 +232,11 @@ select {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: white;
 }
+
+.review-data {
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+.review-data .filled {
+  color: yellow; /* Color the filled stars yellow */
+}
