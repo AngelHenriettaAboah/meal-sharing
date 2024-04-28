@@ -498,22 +498,13 @@ export function Home() {
                 src="https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Home/image19.jpg"
                 alt="Founder Image"
               />
-              <h3
-                style={{
-                  marginBottom: "10%",
-                  paddingBottom: "10%",
-                  color: "white",
-                }}
-              >
-                Ms. Angel Henrietta Aboah
-              </h3>
             </div>
             <div className="founder-text">
               <p>
-                Angel Henrietta is a food enthusiast, computer engineer, and
-                frontend developer based in Denmark. Originally from Liberia,
-                Angel has always had a passion for exploring different cuisines
-                and sharing her love for food with others.
+                Angel Henrietta Aboah is a food enthusiast, computer engineer,
+                and frontend developer based in Denmark. Originally from
+                Liberia, Angel has always had a passion for exploring different
+                cuisines and sharing her love for food with others.
               </p>
               <p>
                 Driven by her dual passions for technology and gastronomy, Angel
