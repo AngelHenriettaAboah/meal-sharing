@@ -58,7 +58,7 @@ export function Home() {
                   textAlign: "center",
                   display: "grid",
                   gridTemplateRows: "auto 1fr 50px",
-                  position: "relative",
+                  position: "grid",
                 }}
               >
                 <img
@@ -95,7 +95,7 @@ export function Home() {
                   textAlign: "center",
                   display: "grid",
                   gridTemplateRows: "auto 1fr 50px",
-                  position: "relative",
+                  position: "grid",
                 }}
               >
                 <img
@@ -144,7 +144,7 @@ export function Home() {
                     textAlign: "center",
                     display: "grid",
                     gridTemplateRows: "auto 1fr 50px",
-                    position: "relative",
+                    position: "grid",
                   }}
                 >
                   <h3>Sushi</h3>
@@ -526,21 +526,6 @@ export function Home() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="section" style={{ backgroundColor: "#332002" }}>
-        <div className="container">
-          {/* Content section at the end of your page */}
-        </div>
-      </section>
-      <section className="section" style={{ backgroundColor: "#332002" }}>
-        <div className="container">
-          {/* Content  section at the end of your page */}
-        </div>
-      </section>
-      <section className="section" style={{ backgroundColor: "#332002" }}>
-        <div className="container">
-          {/* Content section at the end of your page */}
         </div>
       </section>
     </div>

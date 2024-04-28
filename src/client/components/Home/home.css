@@ -49,7 +49,7 @@
 
 @media screen and (max-width: 600px) {
   .main-container {
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px;
   }
   .container-list {
@@ -176,7 +176,7 @@
 
 .full-screen {
   height: 100vh; /* Full screen height */
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: auto; /* Enable vertical scrolling */
 }
 
 .section {
