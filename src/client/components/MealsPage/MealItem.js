@@ -14,7 +14,8 @@ export function MealItem(props) {
         stars.push(emptyStar);
       }
     }
-    return stars.join(" "); // Join stars into a single string
+    const starsString = stars.join(" "); // Join stars into a single string
+    return `${starsString} (${rating}/5)`; // Append the rating value
   };
 
   const randomRating = Math.floor(Math.random() * 6);
