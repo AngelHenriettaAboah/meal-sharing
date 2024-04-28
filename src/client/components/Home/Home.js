@@ -51,16 +51,7 @@ export function Home() {
             <h2 style={{ color: "#f8f4f3" }}>Featured Meals</h2>
             <div className="card-container">
               {/* Card 1 */}
-              <div
-                className="card"
-                style={{
-                  justifyContent: "center",
-                  textAlign: "center",
-                  display: "grid",
-                  gridTemplateRows: "auto 1fr 50px",
-                  position: "grid",
-                }}
-              >
+              <div className="card">
                 <img
                   src={image4}
                   alt="Meal 1"
