@@ -370,7 +370,7 @@ export function Home() {
 
                 <button className="map-button">
                   <a
-                    to="https://www.google.com/maps/dir//Via+Giuseppe+Garibaldi,+70,+25086+Rezzato+BS,+Italy/@45.5087725,10.2417273,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47819ffa6941f263:0xa27d65a0c3d2dd20!2m2!1d10.3240922!2d45.508829?hl=en&entry=ttu"
+                    href="https://www.google.com/maps/dir//Via+Giuseppe+Garibaldi,+70,+25086+Rezzato+BS,+Italy/@45.5087725,10.2417273,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47819ffa6941f263:0xa27d65a0c3d2dd20!2m2!1d10.3240922!2d45.508829?hl=en&entry=ttu"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="map-link"
