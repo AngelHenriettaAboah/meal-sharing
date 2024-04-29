@@ -224,6 +224,7 @@ select {
 }
 
 .meal-card {
+  border: 1px solid #ccc;
   border-radius: 7px;
   padding: 15px;
   margin: auto;
