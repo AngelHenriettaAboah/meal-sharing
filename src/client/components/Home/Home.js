@@ -437,7 +437,7 @@ export function Home() {
           <div className="about-content">
             <div className="about-image">
               <img
-                src="https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Home/image18.jpg"
+                src="https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/assets/images/meal26.jpg"
                 alt="About Us Image"
               />
             </div>

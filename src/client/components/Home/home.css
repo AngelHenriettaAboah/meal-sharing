@@ -1,7 +1,13 @@
 body,
 html {
   overflow-x: hidden;
-  overflow-y: hidden;
+}
+
+@media (max-width: 600px) {
+  body,
+  html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
 }
 
 .main-container {
@@ -132,12 +138,15 @@ html {
 
 .meal-image {
   width: 100%;
+  max-width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
 .meal-info {
   padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .meal-info h3 {
@@ -258,6 +267,16 @@ html {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+.full-screen {
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Add overflow-x: hidden to the div element */
+.my-div {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #feature-meals {
