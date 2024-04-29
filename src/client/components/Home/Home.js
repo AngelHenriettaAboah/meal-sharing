@@ -474,10 +474,10 @@ export function Home() {
             </div>
             <div className="about-text">
               <p>
-                Our meal sharing app is designed to bring people together
-                through the love of food. Whether you're a passionate home cook
-                or an adventurous foodie, our platform provides a space for you
-                to connect, share, and discover delicious meals from around the
+                Mama G meal sharing is designed to bring people together through
+                the love of food. Whether you're a passionate home cook or an
+                adventurous foodie, our platform provides a space for you to
+                connect, share, and discover delicious meals from around the
                 world.
               </p>
 
