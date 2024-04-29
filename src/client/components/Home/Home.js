@@ -332,7 +332,7 @@ export function Home() {
                     rel="noopener noreferrer"
                     className="map-link"
                   >
-                    View on Google Maps
+                    Visit
                   </a>
                 </button>
               </div>
@@ -375,7 +375,7 @@ export function Home() {
                     rel="noopener noreferrer"
                     className="map-link"
                   >
-                    View on Google Maps
+                    Visit
                   </a>
                 </button>
               </div>
@@ -417,7 +417,7 @@ export function Home() {
                     rel="noopener noreferrer"
                     className="map-link"
                   >
-                    View on Google Maps
+                    Visit
                   </a>
                 </button>
               </div>
