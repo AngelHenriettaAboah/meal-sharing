@@ -325,6 +325,16 @@ export function Home() {
                   Liberia, West africa and famous for its varieties continental
                   african dishes.
                 </p>
+                <button className="map-button">
+                  <a
+                    href="https://www.google.com/maps/dir//Monrovia,+Liberia/@6.2927629,-10.863567,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xf0a02a11d967007:0xa5421a7e0d185c68!2m2!1d-10.7811651!2d6.2927694?entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="map-link"
+                  >
+                    View on Google Maps
+                  </a>
+                </button>
               </div>
             </div>
             {/* card 2 */}
@@ -357,6 +367,17 @@ export function Home() {
                   the Kaiten, the particular conveyor belt to serve freshly
                   prepared sushi on colored saucers indicating prices.
                 </p>
+
+                <button className="map-button">
+                  <a
+                    to="https://www.google.com/maps/dir//Via+Giuseppe+Garibaldi,+70,+25086+Rezzato+BS,+Italy/@45.5087725,10.2417273,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47819ffa6941f263:0xa27d65a0c3d2dd20!2m2!1d10.3240922!2d45.508829?hl=en&entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="map-link"
+                  >
+                    View on Google Maps
+                  </a>
+                </button>
               </div>
             </div>
             <div className="card">
@@ -389,6 +410,16 @@ export function Home() {
                   heart of Madrid, our restaurant captures the essence of
                   Spanish cuisine with a modern twist.
                 </p>
+                <button className="map-button">
+                  <a
+                    href="https://www.google.com/maps/dir//C.+de+Cádiz,+4,+Centro,+28012+Madrid,+Spain/@40.4157745,-3.7853846,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd4228794c010283:0x62b53647e666590f!2m2!1d-3.7029837!2d40.4158037?entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="map-link"
+                  >
+                    View on Google Maps
+                  </a>
+                </button>
               </div>
             </div>
             <p

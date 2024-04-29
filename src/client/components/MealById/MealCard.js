@@ -1,6 +1,6 @@
 import React from "react";
 
-function MealCard({ title, description, availRes, imageUrl }) {
+function MealCard({ title, description, mealPrice, availRes, imageUrl }) {
   return (
     <div
       className="meal-card"
@@ -18,6 +18,7 @@ function MealCard({ title, description, availRes, imageUrl }) {
       <h3 className="meal-title">{title}</h3>
       <img src={imageUrl} alt={title} className="meal-item-image" />
       <p className="meal-description">{description}</p>
+      <p className="meal-price">{mealPrice} kr.</p>
       <p className="meal-description">There are {availRes} meals left</p>
     </div>
   );

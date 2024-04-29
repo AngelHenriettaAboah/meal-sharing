@@ -58,6 +58,7 @@ export function MealWithId() {
       <MealCard
         title={meal.title}
         description={meal.description}
+        mealPrice={meal.price}
         availRes={availRes}
         imageUrl={meal.image}
       />

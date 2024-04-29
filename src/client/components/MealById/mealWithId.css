@@ -234,9 +234,16 @@ select {
 }
 
 .review-data {
-  font-size: 16px; /* Adjust the font size as needed */
+  font-size: 16px;
 }
 
 .review-data .filled {
-  color: yellow; /* Color the filled stars yellow */
+  color: yellow;
+}
+
+@media screen and (max-width: 600px) {
+  .meal-card {
+    width: 100%;
+    max-width: 500px;
+  }
 }
