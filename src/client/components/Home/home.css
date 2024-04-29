@@ -55,7 +55,7 @@ html {
 
 .text-home-page {
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 800;
   color: white;
 }
@@ -184,19 +184,37 @@ html {
 }
 
 .about-image {
-  flex-grow: 0;
-  margin-right: 20px;
-  display: flex;
+  flex: 1;
 }
 
 .about-image img {
-  width: 100%;
-  height: auto;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .about-text {
   flex: 1; /* Allow text to take up remaining space */
   background-color: #8e7934;
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns: image and text */
+    gap: 20px; /* Gap between columns */
+  }
+
+  .about-image {
+    margin-right: 0; /* Increase margin for more spacing */
+    width: auto;
+  }
+
+  .about-text {
+    padding: 40px; /* Increase padding for more spacing */
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -218,14 +236,16 @@ html {
   height: 500px; /* Adjust size as needed */
   flex-grow: 0; /* Prevent image from growing */
   margin-right: 20px; /* Add some spacing between image and text */
+  margin-left: auto;
+  margin-top: 20px;
   display: flex;
 }
 
 .founder-image img {
-  max-width: 450px; /* Adjust the maximum width as needed */
-  width: 100%;
-  height: auto;
+  max-width: 100%; /* Adjust the maximum width as needed */
+  max-height: 100%;
   border-radius: 50%; /* Make the image round */
+  object-fit: contain;
   background-color: #332002;
 }
 
