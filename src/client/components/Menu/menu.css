@@ -10,6 +10,12 @@
   align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  .menupage-container {
+    width: 100%;
+  }
+}
+
 .h-menu {
   display: flex;
   align-items: center;
