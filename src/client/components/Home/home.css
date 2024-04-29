@@ -306,3 +306,32 @@ html {
   /* Apply animation */
   animation: popUp 0.3s ease forwards;
 }
+
+.map button,
+.map-link {
+  background-color: #0c346d;
+  color: #ea4625;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.map-button {
+  background-color: #f0f0f0;
+}
+
+.map-button:hover,
+.map-button:hover.map-link {
+  background-color: #f0f0f0;
+}
+
+.map-link {
+  align-items: center;
+  color: #ea4625;
+  text-decoration: none;
+}
