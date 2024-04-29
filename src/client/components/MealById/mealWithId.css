@@ -224,13 +224,17 @@ select {
 }
 
 .meal-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 10px;
+  border-radius: 7px;
+  padding: 15px;
+  margin: auto;
   background-color: #0c346d;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: white;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  width: 100%;
 }
 
 .review-data {
@@ -245,5 +249,6 @@ select {
   .meal-card {
     width: 100%;
     max-width: 500px;
+    margin: 10px auto;
   }
 }
