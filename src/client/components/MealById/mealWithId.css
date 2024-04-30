@@ -26,12 +26,6 @@
   font-style: italic;
 }
 
-.meal-description {
-  margin: 30px;
-  font-size: 18px;
-  text-align: center;
-}
-
 .meal-card .meal-options {
   display: flex;
   justify-content: space-between;
@@ -271,7 +265,10 @@ select {
   display: flex;
   text-align: center;
   width: 90%;
-  max-width: 90%;
+  max-width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
 }
 
 .review-data {
@@ -286,6 +283,6 @@ select {
   .meal-card {
     width: 90%;
     max-width: 90%;
-    margin: 10px auto;
+    height: auto;
   }
 }
