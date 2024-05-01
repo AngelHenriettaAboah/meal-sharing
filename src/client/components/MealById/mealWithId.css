@@ -26,18 +26,10 @@
   font-style: italic;
 }
 
-.meal-card .meal-options {
-  margin-top: auto;
-}
-
-.meal-card .meal-options button {
-  font-size: 16px;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #114d4dba;
-  color: white;
+.meal-description {
+  margin: 30px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .reservation-form {
@@ -251,12 +243,6 @@ select {
   .reviews-list {
     grid-template-columns: repeat(1, 1fr);
   }
-
-  .meal-card {
-    width: 90%;
-    max-width: 90%;
-    height: auto;
-  }
 }
 
 .meal-card {
@@ -270,10 +256,7 @@ select {
   display: flex;
   text-align: center;
   width: 90%;
-  max-width: 300px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
+  max-width: 90%;
 }
 
 .review-data {
@@ -282,4 +265,12 @@ select {
 
 .review-data .filled {
   color: yellow;
+}
+
+@media screen and (max-width: 600px) {
+  .meal-card {
+    width: 90%;
+    max-width: 90%;
+    margin: 10px auto;
+  }
 }
