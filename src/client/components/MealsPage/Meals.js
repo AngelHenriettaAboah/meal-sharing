@@ -21,7 +21,7 @@ export function Meals() {
               mealDescription={item.description}
               locationRestaurant={item.location}
               mealPrice={item.price}
-              image={`${item.image}`} // Construct image source path
+              image={`${item.image}`}
             />
           );
         })}

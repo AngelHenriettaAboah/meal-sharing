@@ -56,9 +56,9 @@ export function ReviewForm(props) {
       },
     }).then((response) => {
       if (response.ok) {
-        setShowConfetti(true); // Show confetti when review is successfully submitted
+        setShowConfetti(true);
         setTimeout(() => {
-          setShowConfetti(false); // Hide confetti after 5 seconds
+          setShowConfetti(false);
         }, 5000);
         alert("Your review sent successfully");
         props.fetchReviewsFunction();
@@ -135,8 +135,8 @@ export function ReviewForm(props) {
               startVelocity: 40,
               elementCount: 50,
               decay: 0.9,
-              left: "50%", // Position confetti in the middle horizontally
-              top: "50%", // Position confetti in the middle vertically
+              left: "50%",
+              top: "50%",
             }}
           />
         </div>

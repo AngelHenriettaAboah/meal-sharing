@@ -103,12 +103,12 @@ export function FormReservation(props) {
         <Confetti
           width={window.innerWidth}
           height={window.innerHeight}
-          recycle={false} // Stops confetti from falling again
-          numberOfPieces={1000} // Adjust the number of confetti pieces
-          gravity={0.1} // Adjust the gravity to control the falling speed
-          wind={0} // Set wind to 0 to make the confetti fall straight down
-          run={reservationSuccess} // Start confetti animation when reservation is successful
-          onConfettiComplete={() => setReservationSuccess(false)} // Reset reservation success state after confetti animation
+          recycle={false}
+          numberOfPieces={1000}
+          gravity={0.1}
+          wind={0}
+          run={reservationSuccess}
+          onConfettiComplete={() => setReservationSuccess(false)}
         />
       )}
     </>

@@ -3,23 +3,23 @@
   height: 100vh;
   flex: 1;
   background-color: #0c346d;
-  background-size: cover; /* Ensures the background image covers the entire container */
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
-  background-position: center; /* Centers the background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .blog-img {
-  width: 100%; /* Set the width to fill the entire viewport */
-  max-height: 300px; /* Set a maximum height for the banner image */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 .blog-text {
-  margin: 50px 50px; /* Top, Right, Bottom, Left */
+  margin: 50px 50px;
   padding: 0 40px;
   color: white;
-  max-height: calc(50vh - 50px); /* Adjust as needed */
-  overflow-y: auto; /* Add scrollbar if content exceeds container height */
+  max-height: calc(50vh - 50px);
+  overflow-y: auto;
 }
 
 .blog-title {
@@ -39,17 +39,17 @@
   }
 
   .blog-img {
-    width: 100%; /* Set the width to fill the entire viewport */
-    max-height: 300px; /* Set a maximum height for the banner image */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
   }
 
   .blog-text {
-    margin: 50px 50px; /* Top, Right, Bottom, Left */
+    margin: 50px 50px;
     padding: 0 40px;
     color: white;
-    max-height: calc(50vh - 50px); /* Adjust as needed */
-    overflow-y: auto; /* Add scrollbar if content exceeds container height */
+    max-height: calc(50vh - 50px);
+    overflow-y: auto;
   }
   .text-food {
     font-size: 15px;

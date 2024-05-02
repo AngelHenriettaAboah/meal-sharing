@@ -45,9 +45,9 @@ export function FormCreateNewMeal() {
         },
       }).then((response) => {
         if (response.ok) {
-          setShowConfetti(true); // Set showConfetti to true after successful submission
+          setShowConfetti(true);
           setTimeout(() => {
-            setShowConfetti(false); // Reset showConfetti after a certain duration
+            setShowConfetti(false);
           }, 5000);
           alert("Meal added succesfully");
           value.fetchMeals();
@@ -133,7 +133,7 @@ export function FormCreateNewMeal() {
       {showConfetti && (
         <Confetti
           active={showConfetti}
-          numberOfPieces={1000} // Adjust the number of confetti pieces
+          numberOfPieces={1000}
           config={{
             angle: 90,
             spread: 360,
