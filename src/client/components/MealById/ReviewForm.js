@@ -41,6 +41,11 @@ export function ReviewForm(props) {
 
   function addReview(event) {
     event.preventDefault();
+    if (review.trim() === "") {
+      alert("Please write your review before submitting.");
+      return;
+    }
+
     fetch("/api/reviews", {
       method: "POST",
       body: JSON.stringify({
