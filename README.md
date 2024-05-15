@@ -1,12 +1,12 @@
-Mama G Meal Sharing App
-➡️ Link to the app on Render
+# Mama G Meal Sharing App
 
-Description
+[Demo Website](https://meal-sharing-fa4o.onrender.com/)
 
-The Meal Sharing App is a full-stack web application designed to facilitate meal sharing among users. Developed as an individual project task for Hack Your Future Denmark, this app utilizes modern technologies for both frontend and backend development. Users can explore available meals, make reservations, and interact with the platform seamlessly.
-Both the backend and Frontend were deployed on Render.
+## Description
 
-The main functionalities of this website are:
+The Meal Sharing App is a full-stack web application designed to facilitate meal sharing among users. Developed as an individual project task for Hack Your Future Denmark, this app utilizes modern technologies for both frontend and backend development. Users can explore available meals, make reservations, and interact with the platform seamlessly. Both the backend and Frontend were deployed on Render.
+
+### Main Functionalities
 
 - **Homepage**: Users can navigate through the homepage to discover available meals and other potential contents.
 - **Interactive Button**: Clickable button redirects users to another page for further interaction.
@@ -14,14 +14,14 @@ The main functionalities of this website are:
 - **Review Form**: A form enables users to add reviews using meal IDs.
 - **Database Integration**: Meals stored in a MySQL database are displayed on the platform.
 
-Technologies Used
+### Technologies Used
 
 - **Frontend**: React, CSS Modules
 - **Backend**: Node.js, Express.js
 - **Database**: MySQL, PostgresSQL
 - **ORM (Object-Relational Mapping)**: KnexJS
 
-What I Learned Vs Challenges
+## What I Learned Vs Challenges
 
 - Rendering components effectively in React.
 - Establishing backend-to-frontend and backend-to-database connections.
@@ -35,28 +35,18 @@ In addition to these technical skills, I also learned how to manage my time effe
 
 Overall, this project was a great learning experience for me and helped me grow as a developer.
 
-Screenshots
+## Screenshots
 
-Home Page
+![Home Page](https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Demo/demopic12.jpg)
 
-/Users/aaronaboah/meal-sharing/src/client/components/Demo/demopic12.jpg
+![Meal Page](https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Demo/demopic14.jpg)
 
-Meal Page
+![Menu Page](https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Demo/demopic11.jpg)
 
-/Users/aaronaboah/meal-sharing/src/client/components/Demo/demopic14.jpg
+![Blog Page](https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Demo/demopic16.jpg)
 
-Menu Page
+![Add Meal Page](https://raw.githubusercontent.com/AngelHenriettaAboah/meal-sharing/react1-week3/angel/src/client/components/Demo/demopic15.jpg)
 
-/Users/aaronaboah/meal-sharing/src/client/components/Demo/demopic11.jpg
-
-Blog Page
-
-/Users/aaronaboah/meal-sharing/src/client/components/Demo/demopic16.jpg
-
-Add Meal Page
-
-/Users/aaronaboah/meal-sharing/src/client/components/Demo/demopic15.jpg
-
-Contact
+## Contact
 
 For any inquiries, Contributions, Collaborations or feedback, please reach out to Angel Henrietta Aboah (aboahangel16@gmail.com).
