@@ -1,75 +1,62 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://www.hackyourfuture.dk/static/logo-dark.svg" alt="Project logo"></a>
-</p>
+Mama G Meal Sharing App
+➡️ Link to the app on Render
 
-<h3 align="center">Meal sharing api</h3>
+Description
 
-<div align="center">
+The Meal Sharing App is a full-stack web application designed to facilitate meal sharing among users. Developed as an individual project task for Hack Your Future Denmark, this app utilizes modern technologies for both frontend and backend development. Users can explore available meals, make reservations, and interact with the platform seamlessly.
+Both the backend and Frontend were deployed on Render.
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+The main functionalities of this website are:
 
-</div>
+- **Homepage**: Users can navigate through the homepage to discover available meals and other potential contents.
+- **Interactive Button**: Clickable button redirects users to another page for further interaction.
+- **Reservation Form**: A form enables users to make reservations using meal IDs.
+- **Review Form**: A form enables users to add reviews using meal IDs.
+- **Database Integration**: Meals stored in a MySQL database are displayed on the platform.
 
----
+Technologies Used
 
-<p align="center"> Website api for sharing meals together. Invite your best friends or your family for dinner!
-    <br> 
-</p>
+- **Frontend**: React, CSS Modules
+- **Backend**: Node.js, Express.js
+- **Database**: MySQL, PostgresSQL
+- **ORM (Object-Relational Mapping)**: KnexJS
 
-## 📝 Table of Contents
+What I Learned Vs Challenges
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [Authors](#authors)
+- Rendering components effectively in React.
+- Establishing backend-to-frontend and backend-to-database connections.
+- Utilizing KnexJS, including its `knex.raw` functionality.
 
-## 🧐 About <a name = "about"></a>
+During the development of this project, I faced several challenges that helped me learn new skills and technologies. Some of the challenges I faced include building a Star component for leaving a rating for a meal, a Modal component, making the website more responsive and fit for all screen sizes as well as having to deploy the app on Render.
 
-Link to deployed website: 
+Through these challenges, I was able to gain a better understanding of React, CSS Modules, and Frontend Development in general. I also learned how to work with ExpressJS, NodeJS, KnexJS, and PostgreSQL to build a full-stack web application.
 
-This project will be built out over 3 different classes:
+In addition to these technical skills, I also learned how to manage my time effectively and prioritize tasks to meet deadlines.
 
-- **Nodejs week 3** - Here you will be building the backend api. Meaning you will work in the `src/backend` folder.
-- **React week 5** - Here you will be building the frontend components and routing. In this week you will be working in the `src/client` folder.
-- **Meal sharing class** - After week 5 of react you will have a specific class for finishing the meal sharing website. Here you will make everything work and deploy the website to the internet
+Overall, this project was a great learning experience for me and helped me grow as a developer.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+Screenshots
 
+Home Page
 
-### Environment variables
+/Users/aaronaboah/meal-sharing/src/client/components/Demo/demopic12.jpg
 
-All sensitive data like fx passwords and usernames, we dont want to add to git! This problem we solve by having environment variables. Environment variables are not committed to git and have a key value structure.
+Meal Page
 
-Remember to copy the `.env.example` file, and rename the copied file to `.env`. In the `.env` file add the relevant host, database name, database user and pasword to your own local database. If you are unsure of these things then select your database in the Mysql Workbench. Now press `Database` -> `Manage Connections...`. Here you can see everything you need except the password. If you forgot that, reset it.
+/Users/aaronaboah/meal-sharing/src/client/components/Demo/demopic14.jpg
 
-### Prerequisites
+Menu Page
 
-- Postman
-- MySQL Workbench
+/Users/aaronaboah/meal-sharing/src/client/components/Demo/demopic11.jpg
 
-### Installing
+Blog Page
 
-To install run `npm install`
+/Users/aaronaboah/meal-sharing/src/client/components/Demo/demopic16.jpg
 
-## 🎈 Usage <a name="usage"></a>
+Add Meal Page
 
-To run `npm run dev`
+/Users/aaronaboah/meal-sharing/src/client/components/Demo/demopic15.jpg
 
-The api can now be found on `http://localhost:3000/api/` an example is `http://localhost:3000/api/meals`
+Contact
 
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [Mysql](https://www.npmjs.com/package/mysql) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ☁️ Deployment <a name = "deployment"></a>
-
-[Deployment guide](https://github.com/HackYourFuture-CPH/deployment-guide)
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@benna100](https://github.com/benna100) - Idea & Initial work
+For any inquiries, Contributions, Collaborations or feedback, please reach out to Angel Henrietta Aboah (aboahangel16@gmail.com).
