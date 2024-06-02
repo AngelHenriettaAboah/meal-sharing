@@ -1,19 +1,44 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import TestComponent from "./components/TestComponent/TestComponent";
+import Header from "./components/Header/Header";
+import { Meals } from "./components/MealsPage/Meals";
+import { MealWithId } from "./components/MealById/MealWithId";
+import { Menu } from "./components/Menu/Menu";
+import { Blog } from "./components/Blog/Blog";
+import { MealsProvider } from "./components/MealsContext/MealsContext";
+import { Home } from "./components/Home/Home";
+import { NotFoundPage } from "./components/NotFound/NotFoundPage";
+import { Footer } from "./components/Footer/Footer";
+import { FormCreateNewMeal } from "./components/AddMeal/FormCreateNewMeal";
 
 function App() {
   return (
     <Router>
-      <Route exact path="/">
-        <p>test</p>
-      </Route>
-      <Route exact path="/lol">
-        <p>lol</p>
-      </Route>
-      <Route exact path="/test-component">
-        <TestComponent></TestComponent>
-      </Route>
+      <Header />
+      <MealsProvider>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/meals">
+            <Meals />
+          </Route>
+          <Route exact path="/menu">
+            <Menu />
+          </Route>
+          <Route path="/meals/:id">
+            <MealWithId />
+          </Route>
+          <Route exact path="/addMeal">
+            <FormCreateNewMeal />
+          </Route>
+          <Route exact path="/blog">
+            <Blog />
+          </Route>
+          <Route component={NotFoundPage} />
+        </Switch>
+      </MealsProvider>
+      <Footer />
     </Router>
   );
 }
